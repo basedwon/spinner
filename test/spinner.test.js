@@ -1,10 +1,9 @@
-const { Spinner, Progress: { Progress, cliProgress }} = require('../lib/main')
+const { spinner, Progress: { Progress, cliProgress }} = require('../lib/main')
 
 describe('Spinner Class', () => {
-  let spinner, stubs
+  let stubs
 
   beforeEach(() => {
-    spinner = new Spinner()
     stubs = {
       add: sinon.stub(spinner.spinner, 'add'),
       update: sinon.stub(spinner.spinner, 'update'),
