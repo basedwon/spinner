@@ -1,6 +1,6 @@
 # Spinner
 
-> Spin'er
+> spin'er
 
 [![npm](https://img.shields.io/npm/v/@basd/spinner?style=flat&logo=npm)](https://www.npmjs.com/package/@basd/spinner)
 [![pipeline](https://gitlab.com/frenware/utils/spinner/badges/master/pipeline.svg)](https://gitlab.com/frenware/utils/spinner/-/pipelines)
@@ -12,13 +12,13 @@
 [![Twitter](https://img.shields.io/badge/@basdwon%20-%20?logo=twitter&color=%23383a40)](https://twitter.com/basdwon)
 [![Discord](https://img.shields.io/badge/Basedwon%20-%20?logo=discord&color=%23383a40)](https://discordapp.com/users/basedwon)
 
-A comprehensive Node.js module providing a set of tools for creating elegant command line interfaces. This package includes features for CLI spinners, progress bars, and color management, all designed to enhance the user experience of your command-line applications.
+A single module for all your spinner and progress bar needs. Get spin'n right away with the pre-configured `spinner` instance or customize to your hearts content. This package includes features for CLI spinners and progress bars, designed to enhance the user experience of your command-line applications.
 
 ## Features
 
 - **CLI Spinners**: Utilize a variety of spinner styles for asynchronous operations.
 - **Progress Bars**: Implement customizable progress bars for tracking lengthy processes.
-- **Color Management**: Enhance the CLI with a range of colors for text and background.
+- **Turn-Key Spinner**: Singleton spinner instance for the especially lazy amongst us.
 
 ## Installation
 
@@ -32,7 +32,7 @@ npm install @basd/spinner
 
 ### Spinners
 
-```javascript
+```js
 const { Spinner } = require('@basd/spinner')
 
 const spinner = new Spinner({
@@ -50,7 +50,7 @@ spinner.succeed('Completed!')
 
 ### Progress Bars
 
-```javascript
+```js
 const { Progress } = require('@basd/spinner')
 
 const progressBar = new Progress({
@@ -65,14 +65,6 @@ progressBar.increment(10)
 progressBar.update(50)
 // Complete the progress
 progressBar.stop()
-```
-
-### Colors
-
-```javascript
-const { colors } = require('@basd/spinner')
-
-console.log(colors.red('This is a red text'))
 ```
 
 ## Documentation
@@ -116,3 +108,4 @@ If you find this project useful and want to help support further development, pl
 ## License
 
 @basd/spinner is [MIT licensed](https://gitlab.com/frenware/utils/spinner/-/blob/master/LICENSE).
+

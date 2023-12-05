@@ -14,19 +14,19 @@
   "homepage": "https://github.com/basedwon/spinner#readme",
   "main": "lib/main.js",
   "scripts": {
+    "dev:test": "nodemon -w .. -x npm test",
     "dev": "nodemon ./test/tester",
     "docs": "jsdoc2md \"lib/**/*.js\" > docs/api.md",
-    "update": "npm i -D basd@latest",
-    "test": "node ./test/tester"
+    "update": "npm i -D @basd/testr@latest",
+    "test": "testr test"
   },
   "dependencies": {
-    "cli-color": "^2.0.3",
     "cli-progress": "^3.12.0",
     "cli-spinners": "^2.9.2",
     "spinnies": "^0.5.1"
   },
   "devDependencies": {
-    "basd": "^1.0.16",
+    "@basd/testr": "^0.1.2",
     "jsdoc": "^4.0.2",
     "jsdoc-to-markdown": "^8.0.0"
   },

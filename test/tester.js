@@ -1,5 +1,5 @@
 const { _, log } = require('basd')
-const { Spinner, spinner, Progress, colors } = require('../lib/main')
+const { Spinner, spinner, Progress } = require('../lib/main')
 
 async function test() {
   const bar = new Progress()

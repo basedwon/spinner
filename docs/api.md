@@ -12,9 +12,9 @@
 ## Members
 
 <dl>
-<dt><a href="#colors">colors</a></dt>
-<dd><p>A utility for adding color and style to CLI text.
-Provided by the &#39;cli-color&#39; package.</p>
+<dt><a href="#spinner">spinner</a></dt>
+<dd><p>A singleton instance of the Spinner class.
+Useful for quick access when only one spinner is needed.</p>
 </dd>
 </dl>
 
@@ -27,15 +27,18 @@ Progress bar class for command line interfaces.
 
 * [Progress](#Progress) : [<code>Progress</code>](#Progress)
     * [new Progress(opts)](#new_Progress_new)
-    * [.total](#Progress+total) ⇒ <code>number</code>
-    * [.total](#Progress+total)
-    * [.start([start])](#Progress+start)
-    * [.increment(delta, [payload])](#Progress+increment)
-    * [.update(value, [payload])](#Progress+update)
-    * [.updateETA()](#Progress+updateETA)
-    * [.setTotal(totalValue)](#Progress+setTotal)
-    * [.log(text)](#Progress+log)
-    * [.stop()](#Progress+stop)
+    * _instance_
+        * [.total](#Progress+total) ⇒ <code>number</code>
+        * [.total](#Progress+total)
+        * [.start([start])](#Progress+start)
+        * [.increment(delta, [payload])](#Progress+increment)
+        * [.update(value, [payload])](#Progress+update)
+        * [.updateETA()](#Progress+updateETA)
+        * [.setTotal(totalValue)](#Progress+setTotal)
+        * [.stop()](#Progress+stop)
+    * _static_
+        * [.Progress](#Progress.Progress) ⇒ [<code>Progress</code>](#Progress)
+        * [.cliProgress](#Progress.cliProgress) ⇒ <code>cliProgress</code>
 
 <a name="new_Progress_new"></a>
 
@@ -121,23 +124,28 @@ Sets the total value of the progress bar.
 | --- | --- | --- |
 | totalValue | <code>number</code> | The total value to be set. |
 
-<a name="Progress+log"></a>
-
-### progress.log(text)
-Logs a message without interrupting the progress bar.
-
-**Kind**: instance method of [<code>Progress</code>](#Progress)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| text | <code>string</code> | The text to log. |
-
 <a name="Progress+stop"></a>
 
 ### progress.stop()
 Stops the progress bar and updates it to its total value.
 
 **Kind**: instance method of [<code>Progress</code>](#Progress)  
+<a name="Progress.Progress"></a>
+
+### Progress.Progress ⇒ [<code>Progress</code>](#Progress)
+Static getter for the Progress class itself. 
+This can be useful when you need a reference to the class from a static method.
+
+**Kind**: static property of [<code>Progress</code>](#Progress)  
+**Returns**: [<code>Progress</code>](#Progress) - The Progress class.  
+<a name="Progress.cliProgress"></a>
+
+### Progress.cliProgress ⇒ <code>cliProgress</code>
+Static getter for the cli-progress library.
+This allows access to the cli-progress library from the Progress class without needing to import it separately.
+
+**Kind**: static property of [<code>Progress</code>](#Progress)  
+**Returns**: <code>cliProgress</code> - The cli-progress library.  
 <a name="Spinner"></a>
 
 ## Spinner : [<code>Spinner</code>](#Spinner)
@@ -156,6 +164,7 @@ Represents a spinner for command line interfaces.
     * _static_
         * [.spinner](#Spinner.spinner) ⇒ [<code>Spinner</code>](#Spinner)
         * [.Spinner](#Spinner.Spinner) ⇒ [<code>Spinner</code>](#Spinner)
+        * [.Spinnies](#Spinner.Spinnies) ⇒ <code>Spinnies</code>
         * [.spins](#Spinner.spins) ⇒ [<code>Spinner</code>](#Spinner)
         * [.spin(opts)](#Spinner.spin) ⇒ [<code>Spinner</code>](#Spinner)
 
@@ -247,6 +256,13 @@ Returns the Spinner class.
 
 **Kind**: static property of [<code>Spinner</code>](#Spinner)  
 **Returns**: [<code>Spinner</code>](#Spinner) - The Spinner class.  
+<a name="Spinner.Spinnies"></a>
+
+### Spinner.Spinnies ⇒ <code>Spinnies</code>
+Returns the Spinnies class.
+
+**Kind**: static property of [<code>Spinner</code>](#Spinner)  
+**Returns**: <code>Spinnies</code> - The Spinnies class.  
 <a name="Spinner.spins"></a>
 
 ### Spinner.spins ⇒ [<code>Spinner</code>](#Spinner)
@@ -266,10 +282,10 @@ Creates and returns a new spinner with provided options.
 | --- | --- | --- |
 | opts | <code>Object</code> | The options to create a new spinner. |
 
-<a name="colors"></a>
+<a name="spinner"></a>
 
-## colors
-A utility for adding color and style to CLI text.
-Provided by the 'cli-color' package.
+## spinner
+A singleton instance of the Spinner class.
+Useful for quick access when only one spinner is needed.
 
 **Kind**: global variable  
