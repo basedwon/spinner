@@ -1,6 +1,6 @@
 {
   "name": "@basd/spinner",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A single module for all your spinner and progress bar needs.",
   "author": "Basedwon <basedwon@protonmail.com>",
   "license": "MIT",
