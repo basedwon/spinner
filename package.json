@@ -26,7 +26,7 @@
     "spinnies": "^0.5.1"
   },
   "devDependencies": {
-    "@basd/testr": "^0.1.5",
+    "@basd/testr": "^0.1.6",
     "jsdoc": "^4.0.2",
     "jsdoc-to-markdown": "^8.0.0"
   },
